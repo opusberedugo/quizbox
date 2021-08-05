@@ -93,6 +93,7 @@ nav .options a:hover {
 }
 
 header {
+  display: none;
   background-color: #242323;
   text-align: center;
   padding: 200px 0;
@@ -144,7 +145,6 @@ main section.quiz header p.point {
   margin-right: auto;
 }
 main section.quiz main {
-  display: none;
   padding: 10px;
 }
 main section.quiz main p {
@@ -159,16 +159,17 @@ main section.quiz main p.question {
   font-weight: 500;
 }
 main section.quiz main p.option:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   transition-duration: 500ms;
 }
-main section.quiz main p.option:active {
-  animation: answered 1000ms 1;
+main section.quiz main p.option.selected {
+  background-color: #b1b1b1;
 }
 main section.quiz .columns {
   display: flex;
 }
 main section.quiz .columns button {
+  cursor: pointer;
   color: white;
   display: block;
   width: 100%;
@@ -179,6 +180,10 @@ main section.quiz .columns button {
 }
 main section.quiz .columns button:nth-of-type(2) {
   margin: 0 10px;
+}
+main section.quiz .columns button:disabled {
+  cursor: not-allowed;
+  background-color: #444444;
 }
 
 aside {
