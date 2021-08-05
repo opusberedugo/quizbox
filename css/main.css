@@ -144,6 +144,7 @@ main section.quiz header p.point {
   margin-right: auto;
 }
 main section.quiz main {
+  display: none;
   padding: 10px;
 }
 main section.quiz main p {
